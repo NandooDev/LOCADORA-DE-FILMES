@@ -34,7 +34,7 @@ exports.deleteMovie = async (req, res) => {
         res.status(200).json({ Status: "OK", Message: "Filme deletado com sucesso" });
     } catch (err) {
         res.status(404).json({ 
-            Status: "Error", Message: "Erro ao atualizar filme, por favor tente novamente", Error: err.message 
+            Status: "Error", Message: "Erro ao deletar filme, por favor tente novamente", Error: err.message 
         });
     };
 };

@@ -34,7 +34,7 @@ exports.deleteClient = async (req, res) => {
         res.status(200).json({ Status: "OK", Message: "Cliente deletado com sucesso" });
     } catch (err) {
         res.status(404).json({ 
-            Status: "Error", Message: "Erro ao atualizar cliente, por favor tente novamente", Error: err.message 
+            Status: "Error", Message: "Erro ao deletar cliente, por favor tente novamente", Error: err.message 
         });
     };
 };
