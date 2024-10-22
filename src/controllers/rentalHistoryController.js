@@ -43,7 +43,7 @@ exports.deleteRentalHistory = async (req, res) => {
 
 exports.findRentalHistory = async (req, res) => {
     try {
-        const rentalHistory = await RentalHistory.find();
+        const rentalHistory = await RentalHistory.find().populate('client').populate('rental_film');
         res.status(200).json({ Status: "OK", Message: "Itens no histórico de aluguel encontrados com sucesso", Infos: rentalHistory });
     } catch (err) {
         res.status(404).json({ 
